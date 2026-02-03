@@ -1,20 +1,27 @@
-Day 1: 29/01/2026
-What I Learned - 
-[Basics of Html]
-Description: Moving beyond basic text tags to build accessible, meaningful page structures and handling user input.
-Key Concepts:
-Semantic Tags (<nav>, <article>, <aside>, <section>) vs. <div>.
-Forms & Inputs (Text, Password, Checkbox, Radio, Submit buttons).
-Media Elements (Images, Audio, Video, SVGs).
-Hyperlinks and Anchors (Absolute vs. Relative paths).
-Diary Task: Build a "Registration Page" with a name field, dropdown menu for country, and a bio text area.
+# Day 1: January 29, 2026
 
-Problems Faced
-Broken Images: My profile picture showed a broken icon because I didn't understand how to step up a folder level (../images/pic.jpg) in the file path.
-Form Refresh: Every time I clicked the "Submit" button, the page refreshed instantly, and I lost all the data I just typed.
-Nesting Errors: I accidentally put a <div> inside a <p> tag, and the browser rendered it weirdly because block elements shouldn't go inside inline elements.
+## 📝 Topic: HTML5 Structure & Forms
 
-How I Solved Them
-Broken Images: I moved my images into a dedicated assets/images folder and updated the path to src="./assets/images/pic.jpg". I also learned to use VS Code's autocomplete to verify the path exists.
-Form Refresh: I looked up the <form> element and realized action defaults to the current page. For now, I added onsubmit="return false" to stop the reload while I test the layout.
-Nesting Errors: I used the W3C HTML Validator tool, which flagged the invalid nesting. I replaced the inner <div> with a <span> since it's an inline element.
+### 🧠 What I Learned
+**Objective:** Moving beyond basic text tags to build accessible, meaningful page structures and handle user input.
+
+* **Semantic HTML:** Learned the importance of using specific tags like `<nav>`, `<article>`, `<aside>`, and `<section>` instead of generic `<div>` tags to improve accessibility and SEO.
+* **Forms & Inputs:** Explored different input types (Text, Password, Checkbox, Radio) and how to group them.
+* **Media Elements:** How to properly embed Images (`<img>`), Audio, Video, and SVGs.
+* **Hyperlinks:** The critical difference between **Absolute** links (full URL) and **Relative** paths (local files).
+
+**👉 Diary Task:** Built a "Registration Page" featuring a name field, a country dropdown menu, and a bio text area.
+
+---
+
+### 🚧 Problems Faced
+1.  **Broken Image Paths:** My profile picture rendered as a broken icon. I was confused about how to reference a file located in a folder "above" my current file (`../`).
+2.  **Unwanted Form Refresh:** Every time I clicked "Submit," the page reloaded instantly, clearing all the data I had just typed before I could see the result.
+3.  **Invalid Nesting:** I placed a `<div>` block inside a `<p>` tag. The browser tried to fix it automatically, which caused my layout to look broken and disjointed.
+
+---
+
+### 💡 How I Solved Them
+1.  **Fixing Paths:** I reorganized my files, moving images to a dedicated `assets/images/` folder. I updated the code to `src="./assets/images/pic.jpg"` and started using VS Code's autocomplete to ensure the path was valid.
+2.  **Preventing Default Submit:** I learned that `<form>` tags have a default behavior to send data and reload. To stop this while testing, I added `onsubmit="return false"` to the form tag.
+3.  **W3C Validation:** I used the **W3C HTML Validator** tool to debug the layout. It flagged the nesting error immediately. I replaced the inner `<div>` with a `<span>` (an inline element), which is valid inside a paragraph.
